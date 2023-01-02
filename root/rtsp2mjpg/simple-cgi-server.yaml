@@ -1,0 +1,6 @@
+Address: "0.0.0.0:8000"
+HandlerList:
+  - FileExt: .cgi
+    Handler: bash
+Logging:
+  Level: info
