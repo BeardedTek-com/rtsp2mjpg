@@ -1,3 +1,3 @@
 #!/usr/bin/with-contenv bash
 cd /rtsp2mjpg
-/rtsp2mjpg/simple-cgi-server
+./simple-cgi-server
