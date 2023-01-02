@@ -1,3 +1,0 @@
-#!/usr/bin/with-contenv bash
-cd /rtsp2mjpg
-./simple-cgi-server
