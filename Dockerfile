@@ -19,6 +19,6 @@ WORKDIR /rtsp2mjpg
 RUN wget https://github.com/mback2k/simple-cgi-server/releases/download/0.2/simple-cgi-server
 RUN chmod +x simple-cgi-server
 
-ENTRYPOINT /rtsp2mjpg/simple-cgi-server
+ENTRYPOINT /rtsp2mjpg/run
 
 EXPOSE 8000
