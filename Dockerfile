@@ -7,8 +7,9 @@ WORKDIR /rtsp2mjpg
 
 RUN apk --nocache add \
         wget \
-		ffmpeg && \
-	wget https://github.com/mback2k/simple-cgi-server/releases/download/0.2/simple-cgi-server && \
+		ffmpeg
+
+RUN	wget https://github.com/mback2k/simple-cgi-server/releases/download/0.2/simple-cgi-server && \
 	chmod +x simple-cgi-server && \
 	chown -R 1000:1000 /rtsp2mjpg
 
