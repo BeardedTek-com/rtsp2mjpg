@@ -20,4 +20,3 @@ ENV JPG_RESOLUTION=-1
 EXPOSE 8000
 
 ENTRYPOINT ["/init"]
-COPY custom-services.d /custom-services.d
