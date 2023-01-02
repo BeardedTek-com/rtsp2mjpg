@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+while :
+do
+	/usr/bin/python2.7 -m CGIHTTPServer
+	sleep 1
+done

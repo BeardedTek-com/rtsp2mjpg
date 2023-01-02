@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  rtsp2mjpg:
+    container_name: rtsp2mjpg
+    build: .
+    image: beardedtek/rtsp2mjpg
+    # MUST BE RUN AS NON-ROOT USER!
+    user: 1000:1000
+    restart: unless-stopped
+    ports:
+      - 8880:8000
+    environment:
+      # These are the defaults as defined in the Dockerfile.  You only need to set the values you wish to change
+      - MJPG_RESOLUTION=${MJPG_RESOLUTION} # -1 (keep original resolution)
+      - MJPG_FPS=${MJPG_FPS} # 5 FPS default
+      - JPG_RESOLUTION=${JPG_RESOLUTION} # -1 (keep original resolution)
+      - SOURCE_URL=${SOURCE_URL} # Big Buck Bunny for testing

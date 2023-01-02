@@ -1,0 +1,5 @@
+#!/bin/bash
+WORKINGDIR=$(pwd)
+trap 'kill 0' EXIT
+	${WORKINGDIR}/rtsp2mjpg &
+wait
