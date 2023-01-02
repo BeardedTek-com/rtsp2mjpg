@@ -10,8 +10,7 @@ RUN apt-get update && \
 
 RUN wget https://github.com/mback2k/simple-cgi-server/releases/download/0.2/simple-cgi-server
 
-RUN chmod +x simple-cgi-server && \
-	chmod +x run
+RUN chmod +x simple-cgi-server
 
 ENV SOURCE_URL=rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
 ENV MJPG_FPS=5
