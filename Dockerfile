@@ -8,9 +8,11 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get --no-install-recommends -y install wget
 
-RUN wget https://github.com/mback2k/simple-cgi-server/releases/download/0.2/simple-cgi-server && \
-    chmod +x simple-cgi-server
-	
+RUN wget https://github.com/mback2k/simple-cgi-server/releases/download/0.2/simple-cgi-server
+
+RUN chmod +x simple-cgi-server && \
+	chmod +x run
+
 ENV SOURCE_URL=rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
 ENV MJPG_FPS=5
 ENV MJPG_RESOLUTION=-1
