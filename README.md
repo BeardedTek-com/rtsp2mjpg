@@ -7,6 +7,31 @@
 ## Converts an rtsp/rtmp stream into an mjpeg stream and jpeg snapshots
 Intended to provide OctoPrint with an MJPEG stream and JPG snapshots via an RTSP/RTMP feed.
 
+
+
+# A note on security
+## ***THERE ARE NO SECURITY MECHANISMS IMPLEMENTED IN THIS SETUP***
+### It is up to the user to implement security measures to isolate this server.
+### There are no plans to add password protection, ACL's or any other form of protection.
+### There are, however, options to add security including nginx, traefik, authelia, and many many more solutions.
+### ***USER BEWARE!*** The developers are NOT liable for any security issues imposed by you deploying this solution!
+
+# Features
+## Stream mjpg
+    - http://<ip>:8000/mjpg.cgi
+        - Outputs MJPG Stream via HTTP
+## Take snapshot
+    - http://<ip>:8000/jpg.cgi
+        - Outputs JPG via HTTP
+## Take timelapse and save it to timelapse folder
+    - http://<ip>:8000/layer.cgi
+        - Saves JPG to /data/timelapse for processing
+
+# Planned Features (Not yet implemented)
+## Generate timelapse video
+    - http://<ip>:8000/timelapse.cgi
+        - This will eventually generate a timelapse from snapshots in /data/timelapse folder
+
 # Install
 ## docker-compose is the preferred method
 
