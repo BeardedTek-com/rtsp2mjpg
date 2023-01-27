@@ -26,4 +26,5 @@ ENV MJPG_RESOLUTION=-1
 ENV MJPG_FPS=5
 ENV JPG_RESOLUTION=-1
 ENV SOURCE_URL=rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
+ENV TIMELAPSE_PATH=/rtsp2mjpg/timelapse/
 
