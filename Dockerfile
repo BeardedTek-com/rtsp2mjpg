@@ -14,6 +14,7 @@ COPY --from=build /go/simple-cgi-server/simple-cgi-server /usr/local/bin/simple-
 
 RUN addgroup -g 8080 -S serve
 RUN adduser -u 8080 -h /data -S -D -G serve serve
+
 COPY etc /etc
 COPY --chown=8080:8080 rtsp2mjpg /data
 
@@ -27,4 +28,3 @@ ENV MJPG_FPS=5
 ENV JPG_RESOLUTION=-1
 ENV SOURCE_URL=rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
 ENV TIMELAPSE_PATH=/data/timelapse/
-ENV TIMELAPSE_RESOLUTON=-1
