@@ -15,3 +15,4 @@ services:
       - MJPG_FPS=${MJPG_FPS:-5}
       - JPG_RESOLUTION=${JPG_RESOLUTION:-1}
       - SOURCE_URL=${SOURCE_URL:-rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4}
+      - TIMELAPSE_DIR=${TIMELAPSE_DIR:/rtsp2mjpg/timelapse/}
