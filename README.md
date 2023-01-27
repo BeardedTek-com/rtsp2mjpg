@@ -26,6 +26,22 @@ Intended to provide OctoPrint with an MJPEG stream and JPG snapshots via an RTSP
 ## Take timelapse and save it to timelapse folder
     - http://<ip>:8000/layer.cgi
         - Saves JPG to /data/timelapse for processing
+        - This is intended to be used in conjunction with Octoprint.
+    - Octoprint Setup:
+        - In Octoprint UI:
+        - Click on Setup
+        - Navigate to Event Manager
+        - Add an Event by clicking +Add
+        - Select ZChange for Event
+        - Enter the following into Command:
+            - curl http://<rtsp2mjpg_ip>:<port>/layer.cgi
+        - Select 'system' for type
+        - Ensure 'Enabled' is checked.
+        - Click Close
+        - Click Save
+        - Restart OctoPrint
+        
+
 
 # Planned Features (Not yet implemented)
 ## Generate timelapse video
