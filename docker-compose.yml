@@ -7,6 +7,8 @@ services:
     build: .
     image: beardedtek/rtsp2mjpg
     restart: unless-stopped
+    volumes:
+      - ./timelapse:/data/timelapse
     ports:
       - 8880:8000
     environment:
@@ -16,3 +18,4 @@ services:
       - JPG_RESOLUTION=${JPG_RESOLUTION:-1}
       - SOURCE_URL=${SOURCE_URL:-rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4}
       - TIMELAPSE_DIR=${TIMELAPSE_DIR:/data/timelapse/}
+      - TIMELAPSE_RESOLUTION=${TIMELAPSE_RESOLUTION}
